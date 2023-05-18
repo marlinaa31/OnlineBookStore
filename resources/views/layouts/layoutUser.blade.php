@@ -69,18 +69,35 @@
                   <a class="dropdown-item" href="{{ route('pengembangan_diri') }}">Pengembangan Diri</a>
                 </div>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{{ route('viewcart')}}"> View Cart </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{{ route('contact')}}">Contact Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{{ route('login')}}"> Login </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{{ route('register')}}"> Register</a>
-              </li>
+              @auth
+    @if (Auth::user()->role == 'user')
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('viewcart')}}"> View Cart </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('contact')}}">Contact Us</a>
+        </li>
+    @endif
+    <li class="nav-item">
+        <form action="{{ url('/logout') }}" method="post">
+            @csrf
+            <button type="submit" class="d-none"></button>
+            <a href="#" class="nav-link" onclick="event.preventDefault(); this.closest('form').submit();">Logout</a>
+        </form>
+    </li>
+@else
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('login')}}"> Login </a>
+    </li>
+    @if (Route::has('register'))
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('register')}}"> Register</a>
+        </li>
+    @endif
+@endauth
+
+
+
             </ul>
             <form class="search_form">
               <input type="text" class="form-control" placeholder="Search here..." style="width: 300px;">
