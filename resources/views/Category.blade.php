@@ -58,7 +58,7 @@
             <button class="btn btn-danger btn-sm">Delete</button>
           </li>
           <li class="list-group-item d-flex justify-content-between align-items-center">
-            Pengembangan
+            Pengembangan Diri
             <button class="btn btn-danger btn-sm">Delete</button>
           </li>
         </ul>
