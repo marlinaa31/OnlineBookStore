@@ -1,5 +1,5 @@
 # OnlineBookStore
- Oil Free merupakan aplikasi berbasis web yang dibuat untuk membantu masyarakat dalam pengelolaan dan pembuangan minyak jelantah di Aceh
+BookStore.id adalah sebuah website book store yang inovatif dan menarik. Di sini, Anda dapat menemukan beragam buku dari berbagai genre dan penulis terkenal di seluruh dunia. Desain modern dan antarmuka yang intuitif membuat pengalaman belanja buku online menjadi lebih menyenangkan dan mudah.
  
 ### Anggota Kelompok
     1. Marlina (2108107010009)
