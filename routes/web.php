@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -154,12 +155,17 @@ Route::middleware('auth')->group(function () {
     Route::middleware(['checkRole:admin'])->group(function () {
         // Dashboard
         Route::get('/admin', [AdminController::class, 'adminDashboard'])->name('admin');
+
+        Route::get('/admin/category', [CategoryController::class, 'index'])->name('admin.category.index');
+        Route::post('/admin/category', [CategoryController::class, 'store'])->name('admin.category.store');
+        Route::delete('/admin/category/{id}', [CategoryController::class, 'destroy'])->name('admin.category.destroy');
+
 });
 });
 
-Route::get('/category', function () {
-    return view('category');
-})->name('category');
+Route::get('/category', [CategoryController::class, 'index'])->name('category');
+Route::post('/category', [CategoryController::class, 'store'])->name('category.store');
+Route::delete('/category/{id}', [CategoryController::class, 'destroy'])->name('category.destroy');
 
 Route::get('/books', function () {
     return view('books');
