@@ -6,7 +6,7 @@ BookStore.id adalah sebuah website book store yang inovatif dan menarik. Di sini
     2. Muhammad Kemal Fasya (2108107010052)
 
 ## Persiapan Menjalankan Program
- Masuk ke dalam folder OilFree
+ Masuk ke dalam folder OnlineBookStore
  
     cd OnlineBookStore
     
